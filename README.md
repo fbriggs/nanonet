@@ -21,14 +21,20 @@ This is a basic implementation of a feed-forward multi-layer neural net (no conv
 (3) The paper "Random Features for Large-Scale Kernel Machines" by Ali Rahimi and Ben Recht (https://people.eecs.berkeley.edu/~brecht/papers/07.rah.rec.nips.pdf), proposes to upgrade linear support vector machines to non-linear classification by applying a pre-processing feature transform, before applying a linear learning algorithm. They show that with an appropriate transform, inner products between transformed features are approximately equal (in expectation) to kernel evaluations. In order to approximate the RBF kernel, the transform consists simply of taking the cos() of the original feature's dot product with several random weight vectors sampled from a normal distribution. With appropriately chosen biases, and assuming weights are initialized from a normal distribution, it can be seen that Rahimi and Recht's feature transform to approximate RBF kernels is equivalent to the computation performed by one layer of a multi-layer feed-forward neural net with sin() activation functions! This is an interesting theoretical connection which I haven't seen pointed out anywhere outside of my work.
 
 == install dependencies ==
-brew install cmake
-brew install opencv
+
+`brew install cmake`
+
+`brew install opencv`
 
 == compile ==
-cmake -DCMAKE_BUILD_TYPE=Release
-make -j8
+
+`cmake -DCMAKE_BUILD_TYPE=Release`
+
+`make -j8`
 
 == run test ==
-./TestNanoNet sin
-./TestNanoNet relu
+
+`./TestNanoNet sin`
+
+`./TestNanoNet relu`
 
