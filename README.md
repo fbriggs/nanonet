@@ -38,3 +38,14 @@ This is a basic implementation of a feed-forward multi-layer neural net (no conv
 
 `./TestNanoNet relu`
 
+== results ==
+
+Results after 10,000,000 iterations of SGD with batch size 16 and learning rate 0.1.
+
+relu:
+
+![relu](relu_99.png)
+
+sin:
+
+![sin](sin_99.png)
